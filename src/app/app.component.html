@@ -1,0 +1,15 @@
+<div class="container pt-3">
+  <div class="text-center">
+    <h2>Agenda</h2>
+    <span class="autor">Lista de actividades para el hackathon de vacaciones</span>
+    <div class="row mt-3">
+      <div class="col-lg-6">
+        <app-create-apointment (newAppointment)="addAppintment($event)"></app-create-apointment>
+      </div>
+      <div class="col-lg-6">
+        <app-list-apointment [listAppointmentC]="listAppointment"
+                              (deleteCita)="deleteCitaList($event)"></app-list-apointment>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="card text-left bg-light">
+  <img class="card-img-top" src="holder.js/100px180/" alt="">
+  <div class="card-body">
+    <h4 class="card-title">Crear actividad</h4>
+    <span *ngIf="formError" class="badge badge-pill badge-danger">Debes completar todos los campos</span>
+    
+    <div class="form-group mt-3">
+        <label for="myname">Actividad</label>
+        <input [(ngModel)]="name" type="text" class="form-control" placeholder="Escribe tu actividad" id="myname">
+    </div>
+    <div class="form-group mt-3">
+        <label for="mydate">Fecha</label>
+        <input [(ngModel)]="date" type="date" class="form-control" placeholder="Escribe la fecha" id="mydate">
+    </div>
+    <div class="form-group mt-3">
+        <label for="mytime">Hora</label>
+        <input [(ngModel)]="time" type="time" class="form-control" placeholder="Escribe la hora" id="mytime">
+    </div>
+    <div class="form-group mt-3">
+        <label for="mysymptom">Detalles</label>
+        <textarea [(ngModel)]="syntoms" id="mysymptom" rows="3" class="form-control" placeholder="Describe los detalles..."></textarea>
+    </div>
+    <button style="width: 100%;"class="btn btn-primary btn-block mt-5" (click)="createAppointment()"> 
+        Registrar
+    </button>
+  </div>
+</div>
